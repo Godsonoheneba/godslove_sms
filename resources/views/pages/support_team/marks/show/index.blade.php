@@ -8,8 +8,10 @@
         </div>
     </div>
 
+
     @foreach($exams as $ex)
         @foreach($exam_records->where('exam_id', $ex->id) as $exr)
+
 
                 <div class="card">
                     <div class="card-header header-elements-inline">

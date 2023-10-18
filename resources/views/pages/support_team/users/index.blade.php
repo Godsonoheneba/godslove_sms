@@ -64,22 +64,22 @@
 
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Username: </label>
-                                        <input value="{{ old('username') }}" type="text" name="username" class="form-control" placeholder="Username">
+                                        <label>Username:</label>
+                                        <input disabled value="{{ old('username') }}" type="text" name="username" class="form-control" placeholder="Username">
                                     </div>
                                 </div>
 
                                 <div class="col-md-3">
                                     <div class="form-group">
-                                        <label>Phone:</label>
-                                        <input value="{{ old('phone') }}" type="text" name="phone" class="form-control" placeholder="+2341234567" >
+                                        <label>Phone: <span class="text-danger">*</span></label>
+                                        <input required value="{{ old('phone') }}" type="text" name="phone" class="form-control" placeholder="0241234257" >
                                     </div>
                                 </div>
 
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label>Telephone:</label>
-                                        <input value="{{ old('phone2') }}" type="text" name="phone2" class="form-control" placeholder="+2341234567" >
+                                        <input value="{{ old('phone2') }}" type="text" name="phone2" class="form-control" placeholder="0243452267" >
                                     </div>
                                 </div>
 
@@ -97,7 +97,7 @@
                                 <div class="col-md-3">
                                     <div class="form-group">
                                         <label for="password">Password: </label>
-                                        <input id="password" type="password" name="password" class="form-control"  >
+                                        <input disabled id="password" type="password" name="password" class="form-control"  >
                                     </div>
                                 </div>
 
@@ -128,7 +128,7 @@
                             <div class="row">
                                 {{--State--}}
                                 <div class="col-md-4">
-                                    <label for="state_id">State: <span class="text-danger">*</span></label>
+                                    <label for="state_id">Region: <span class="text-danger">*</span></label>
                                     <select onchange="getLGA(this.value)" required data-placeholder="Choose.." class="select-search form-control" name="state_id" id="state_id">
                                         <option value=""></option>
                                         @foreach($states as $st)
@@ -138,7 +138,7 @@
                                 </div>
                                 {{--LGA--}}
                                 <div class="col-md-4">
-                                    <label for="lga_id">LGA: <span class="text-danger">*</span></label>
+                                    <label for="lga_id">District: <span class="text-danger">*</span></label>
                                     <select required data-placeholder="Select State First" class="select-search form-control" name="lga_id" id="lga_id">
                                         <option value=""></option>
                                     </select>
@@ -177,7 +177,8 @@
                 </div>
 
                 @foreach($user_types as $ut)
-                    <div class="tab-pane fade" id="ut-{{Qs::hash($ut->id)}}">                         <table class="table datatable-button-html5-columns">
+                    <div class="tab-pane fade" id="ut-{{Qs::hash($ut->id)}}">
+                        <table class="table datatable-button-html5-columns">
                             <thead>
                             <tr>
                                 <th>S/N</th>

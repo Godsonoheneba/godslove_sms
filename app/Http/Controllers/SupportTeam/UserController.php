@@ -78,9 +78,10 @@ class UserController extends Controller
         $user_is_teamSA = in_array($user_type, Qs::getTeamSA());
 
         $staff_id = Qs::getAppCode().'/STAFF/'.date('Y/m', strtotime($req->emp_date)).'/'.mt_rand(1000, 9999);
-        $data['username'] = $uname = ($user_is_teamSA) ? $req->username : $staff_id;
+        // $data['username'] = $uname = ($user_is_teamSA) ? $req->username ?: $req->phone : $staff_id;
+        $data['username'] = $uname =  $req->username ?: $req->phone ?: $staff_id;
 
-        $pass = $req->password ?: $user_type;
+        $pass = $req->password ?: $req->phone;
         $data['password'] = Hash::make($pass);
 
         if($req->hasFile('photo')) {

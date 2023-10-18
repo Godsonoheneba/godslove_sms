@@ -80,7 +80,7 @@ var LoginValidation = function() {
                 }
             },
             messages: {
-                username: "Enter your username",
+                username: "Enter your Phone Number",
                 password: {
                     required: "Enter your password",
                     minlength: jQuery.validator.format("At least {0} characters required")

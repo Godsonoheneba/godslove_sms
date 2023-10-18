@@ -211,7 +211,7 @@ class Qs
 
     public static function getPTA()
     {
-        return ['super_admin', 'admin', 'teacher', 'parent'];
+        return ['super_admin', 'admin', 'teacher', 'parent', 'accountant'];
     }
 
     /*public static function filesToUpload($programme)

@@ -3,9 +3,9 @@
     <tr>
         <th rowspan="2">S/N</th>
         <th rowspan="2">SUBJECTS</th>
-        <th rowspan="2">CA1<br>(20)</th>
-        <th rowspan="2">CA2<br>(20)</th>
-        <th rowspan="2">EXAMS<br>(60)</th>
+        <th rowspan="2">CLASS SCORE<br>(50)</th>
+        {{-- <th rowspan="2">CA2<br>(20)</th> --}}
+        <th rowspan="2">EXAMS SCORE<br>(50)</th>
         <th rowspan="2">TOTAL<br>(100)</th>
 
         {{--@if($ex->term == 3) --}}{{-- 3rd Term --}}{{--
@@ -28,7 +28,7 @@
             <td>{{ $loop->iteration }}</td>
             <td>{{ $sub->name }}</td>
             @foreach($marks->where('subject_id', $sub->id)->where('exam_id', $ex->id) as $mk)
-                <td>{{ ($mk->t1) ?: '-' }}</td>
+                {{-- <td>{{ ($mk->t1) ?: '-' }}</td> --}}
                 <td>{{ ($mk->t2) ?: '-' }}</td>
                 <td>{{ ($mk->exm) ?: '-' }}</td>
                 <td>
