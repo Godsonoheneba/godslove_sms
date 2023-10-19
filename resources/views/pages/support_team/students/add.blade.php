@@ -95,7 +95,7 @@
                         </div>
 
                         <div class="col-md-3">
-                            <label for="lga_id">District: <span class="text-danger">*</span></label>
+                            <label for="lga_id">TOWN: <span class="text-danger">*</span></label>
                             <select required data-placeholder="Select State First" class="select-search form-control" name="lga_id" id="lga_id">
                                 <option value=""></option>
                             </select>
