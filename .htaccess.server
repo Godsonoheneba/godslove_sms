@@ -1,5 +1,6 @@
 RewriteEngine on
-RewriteCond %{HTTP_HOST} ^godsloveschool.com$ [NC,OR]
-RewriteCond %{HTTP_HOST} ^www.godsloveschool.com$
+RewriteCond %{HTTP_HOST} ^school.goadtechnologies.com$ [NC,OR]
+RewriteCond %{HTTP_HOST} ^www.school.goadtechnologies.com$
 RewriteCond %{REQUEST_URI} !public/
 RewriteRule (.*) /public/$1 [L]
+
